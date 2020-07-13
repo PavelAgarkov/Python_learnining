@@ -56,7 +56,8 @@ def view_the_log() -> str:
     with open('vsearch.log') as log:
         for line in log:
             contents.append([])
-            for item in line.split('|'):
+            split = line.split('|')
+            for item in split:
                 contents[-1].append(escape(item))
     titles = titles = ('Form Data', 'Remote_addr', 'User_agent', 'Results')
 
