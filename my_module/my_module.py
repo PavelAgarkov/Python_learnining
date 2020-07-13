@@ -1,2 +1,2 @@
 def get1(name):
-    print(name)
+    return name
