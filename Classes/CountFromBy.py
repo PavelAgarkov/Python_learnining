@@ -1,4 +1,7 @@
 class CountFromBy:
+    value = None
+    increment = None
+
     def __init__(self, value: int = 0, increment: int = 1) -> None:
         self.value = value
         self.increment = increment
