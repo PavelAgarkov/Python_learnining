@@ -45,3 +45,34 @@ print('\nМодули')
 # установка фреймворка pytest для проверки кода на соответствие pep8
 
 my_module.get1(123)
+
+
+def apply(func: object) -> object:
+    return func
+
+
+def go(name):
+    print(name)
+
+
+closure = apply(go)
+closure('all')
+
+list1 = [1, 2, 3, 4, 5]
+
+
+def list_func(*lis):
+    for element in lis:
+        print(element)
+
+
+list_func(*list1)
+list_func(4,5,6,7,8,9)
+
+
+def func_many_name_arguments(**args):
+    for key, param in args.items():
+        print(str(key) + '->' + str(param))
+
+
+func_many_name_arguments(a=1, b='gh', c=list_func)
