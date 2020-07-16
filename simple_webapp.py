@@ -54,4 +54,3 @@ def do_logout() -> str:
 if __name__ == '__main__':
     app.run(debug=True)
 
-# 422 стр

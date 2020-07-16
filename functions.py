@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import my_module
+from csv_conversion import csv_dict_conversion
 
 # аннотация не язвляется обязательной и не проверяет типы
 print('\nФункции')
@@ -67,7 +68,7 @@ def list_func(*lis):
 
 
 list_func(*list1)
-list_func(4,5,6,7,8,9)
+list_func(4, 5, 6, 7, 8, 9)
 
 
 def func_many_name_arguments(**args):
@@ -76,3 +77,32 @@ def func_many_name_arguments(**args):
 
 
 func_many_name_arguments(a=1, b='gh', c=list_func)
+
+# try:
+#     with open('my_file.txt') as fh:
+#         file_data = fh.read()
+#     print(file_data)
+# except Exception as error:
+#     # получение последнего исключения в текущем приложении
+#     raise error
+#     # err = sys.exc_info()
+#     # for e in err:
+#     #     print(e)
+# a = 1;
+# print(a)
+
+csv_dict_conversion('file.csv')
+
+
+# для изменяемых данных (структур: dict, list) переменная записывается по ссылке,
+# в неизменяемые (обычные: str, int, bool)
+b = [2]
+
+
+def a(b):
+    b[0] += 1
+
+
+a(b)
+
+print(b)
